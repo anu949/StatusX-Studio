@@ -14,7 +14,7 @@ import StoryTemplates from './pages/StoryTemplates'
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/StatusX-Studio">
       <Routes>
         {/* Public Routes */}
         <Route path="/" element={<Home />} />
@@ -50,12 +50,12 @@ function App() {
         />
 
         <Route
-           path="/stories/:id"
-           element={
-             <ProtectedRoute>
-               <StoryViewer />
-             </ProtectedRoute>
-         }
+          path="/stories/:id"
+          element={
+            <ProtectedRoute>
+              <StoryViewer />
+            </ProtectedRoute>
+          }
         />
 
         <Route
@@ -66,23 +66,24 @@ function App() {
             </ProtectedRoute>
           }
         />
+
         <Route
           path="/template-editor/:templateId"
           element={
             <ProtectedRoute>
               <TemplateEditor />
             </ProtectedRoute>
-            }
-        /> 
+          }
+        />
+
         <Route
           path="/templates"
           element={
-           <ProtectedRoute>
-             <StoryTemplates />
+            <ProtectedRoute>
+              <StoryTemplates />
             </ProtectedRoute>
-             }
+          }
         />
-
       </Routes>
     </BrowserRouter>
   )
