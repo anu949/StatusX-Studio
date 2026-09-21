@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import axios from 'axios'
+import api from '../api'
 import { Trash2, Loader2 } from 'lucide-react'
 
 function StoriesFeed() {
@@ -18,9 +18,7 @@ function StoriesFeed() {
       setLoading(true)
       setError('')
 
-      const response = await axios.get(
-        'http://localhost:5000/api/stories'
-      )
+      const response = await api.get('/stories')
 
       console.log('Stories:', response.data)
 
@@ -58,9 +56,7 @@ function StoriesFeed() {
       setDeletingId(storyId)
       setError('')
 
-      const response = await axios.delete(
-        `http://localhost:5000/api/stories/${storyId}`
-      )
+      const response = await api.delete(`/stories/${storyId}`)
 
       console.log('Delete response:', response.data)
 

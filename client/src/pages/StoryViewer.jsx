@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import axios from 'axios'
+import api from '../api'
 
 function StoryViewer() {
   const { id } = useParams()
@@ -21,9 +21,7 @@ function StoryViewer() {
         setLoading(true)
         setError('')
 
-        const response = await axios.get(
-          `http://localhost:5000/api/stories/${id}`
-        )
+       const response = await api.get(`/stories/${id}`)
 
         setStory(response.data.story)
         setCurrentIndex(0)
@@ -53,9 +51,7 @@ function StoryViewer() {
 
     const increaseView = async () => {
       try {
-        await axios.patch(
-          `http://localhost:5000/api/stories/${id}/view`
-        )
+        await api.patch(`/stories/${id}/view`)
       } catch (err) {
         console.error('View count error:', err)
       }
