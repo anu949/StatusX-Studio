@@ -7,9 +7,9 @@ const connectDB = require('./config/db')
 const storyRoutes = require('./routes/storyRoutes')
 const authRoutes = require('./routes/authRoutes')
 
-console.log('Cloud Name:', process.env.CLOUDINARY_CLOUD_NAME)
-console.log('API Key:', process.env.CLOUDINARY_API_KEY)
-console.log('API Secret:', process.env.CLOUDINARY_API_SECRET)
+console.log('cloud Name:', process.env.CLOUDINARY_CLOUD_NAME)
+console.log('API key:', process.env.CLOUDINARY_API_KEY)
+console.log('API secret:', process.env.CLOUDINARY_API_SECRET)
 
 const app = express()
 
