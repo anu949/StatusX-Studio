@@ -18,12 +18,12 @@ import {
 
 function Home() {
   return (
-    <div className="min-h-screen bg-slate-950 text-white overflow-hidden">
+    <div className="min-h-screen bg-white text-slate-900 overflow-hidden">
 
       {/* =========================================================
           NAVBAR
       ========================================================= */}
-      <nav className="border-b border-white/10 bg-slate-950/90 backdrop-blur-xl sticky top-0 z-50">
+      <nav className="border-b border-slate-200 bg-white/90 backdrop-blur-xl sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
           {/* Logo */}
@@ -33,7 +33,7 @@ function Home() {
             </div>
 
             <div>
-              <h1 className="text-xl font-bold tracking-tight">
+              <h1 className="text-xl font-bold tracking-tight text-slate-900">
                 StatusX <span className="text-green-400">Studio</span>
               </h1>
               <p className="text-[10px] text-slate-500 tracking-widest uppercase">

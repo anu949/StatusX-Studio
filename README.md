@@ -45,6 +45,17 @@ The application currently provides templates for:
 - 📸 Memories
 
 ## 🛠️ Tech Stack
+### Register
+![alt text](image.png)
+
+### Login
+![alt text](image-1.png)
+### Dashboard
+![alt text](image-2.png)
+### Use Templates
+![alt text](image-3.png)
+### Storyviwer
+![alt text](image-4.png)
 
 ### Frontend
 
